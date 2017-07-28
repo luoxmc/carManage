@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import axios from 'axios'
 Vue.prototype.$http = axios;
+import 'weui/dist/style/weui.min.css'
 import First from './components/First.vue'
 import Second from './components/Second.vue'
 import Map from './components/Map.vue'
