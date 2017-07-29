@@ -2,7 +2,7 @@
   "name": "car",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "luozc <luozc@thinkive.com>",
+  "author": "luozc <luoxmc@vip.qq.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",

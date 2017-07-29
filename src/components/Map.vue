@@ -16,17 +16,11 @@ export default {
     }
   },
   mounted: function() {
-      var map = new BMap.Map("mapContainer");//创建地图实例
-      //初始化地图 默认加载北京天安门
+     this.hideFooter();
+     var map = new BMap.Map("mapContainer");//创建地图实例
+     //初始化地图 默认加载北京天安门
      var point = new BMap.Point(116.331398,39.897445);
      map.centerAndZoom(point,16);//初始化地图，point为中心点，缩放级别为16
-     //判断手机浏览器是否支持定位
-     if(navigator.geolocation){
-         var geolocation = new BMap.Geolocation();//创建定位实例
-         geolocation.getCurrentPosition(showLocation,{enableHighAccuracy: true});//enableHighAccuracy 要求浏览器获取最佳结果
-     }else{
-         map.addControl(new BMap.GeolocationControl());//添加定位控件 支持定位
-     }
      //处理定位后的信息
      var showLocation = function(r){
         if(this.getStatus() == BMAP_STATUS_SUCCESS){//定位成功
@@ -41,7 +35,14 @@ export default {
         }else {
             alert('failed'+this.getStatus());//定位失败
         }
-  	};
+  	 };
+     //判断手机浏览器是否支持定位
+     if(navigator.geolocation){
+         var geolocation = new BMap.Geolocation();//创建定位实例
+         geolocation.getCurrentPosition(showLocation,{enableHighAccuracy: true});//enableHighAccuracy 要求浏览器获取最佳结果
+     }else{
+         map.addControl(new BMap.GeolocationControl());//添加定位控件 支持定位
+     }
   }
 }
 </script>

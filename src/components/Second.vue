@@ -11,6 +11,9 @@ export default {
     return {
       content: '这里是second啊卧槽'
     }
+  },
+  mounted: function(){
+    this.showFooter();
   }
 }
 </script>
