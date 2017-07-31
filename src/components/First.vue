@@ -1,6 +1,41 @@
 <template>
   <div class="first">
     <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
+    <p>{{content}}</p>
   </div>
 </template>
 
@@ -14,8 +49,8 @@ export default {
     }
   },
   mounted: function() {
-    alert($("#app").attr("id"));
-    this.$router.push("/second");
+    this.showFooter();
+    this.loadingToast();
 	}
 }
 </script>

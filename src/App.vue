@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <!-- router(路由) 插槽, 其中所有匹配的组件将在这里呈现 -->
-    <router-view></router-view>
-    <footer id="footer">
-      <div class="weui-tabbar">
+    <div class="weui-tab">
+      <div class="page_main" id="main">
+        <!-- router(路由) 插槽, 其中所有匹配的组件将在这里呈现 -->
+        <router-view></router-view>
+      </div>
+
+      <div class="weui-tabbar" id="footer">
           <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
               <span style="display: inline-block;position: relative;">
                   <img src="" alt="" class="weui-tabbar__icon">
-                  <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
               </span>
               <p class="weui-tabbar__label">微信</p>
           </a>
@@ -18,7 +20,6 @@
           <a href="javascript:;" class="weui-tabbar__item">
               <span style="display: inline-block;position: relative;">
                   <img src="" alt="" class="weui-tabbar__icon">
-                  <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
               </span>
               <p class="weui-tabbar__label">发现</p>
           </a>
@@ -27,7 +28,27 @@
               <p class="weui-tabbar__label">我</p>
           </a>
       </div>
-    </footer>
+    </div>
+
+    <!--BEGIN toast-->
+      <div id="toast" style="display: none;">
+          <div class="weui-mask_transparent"></div>
+          <div class="weui-toast">
+              <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+              <p class="weui-toast__content">已完成</p>
+          </div>
+      </div>
+      <!--end toast-->
+
+      <!-- loading toast -->
+      <div id="loadingToast" style="display:none;">
+          <div class="weui-mask_transparent"></div>
+          <div class="weui-toast">
+              <i class="weui-loading weui-icon_toast"></i>
+              <p class="weui-toast__content">数据加载中</p>
+          </div>
+      </div>
+
   </div>
 </template>
 

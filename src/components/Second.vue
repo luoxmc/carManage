@@ -13,7 +13,7 @@ export default {
     }
   },
   mounted: function(){
-    this.showFooter();
+    this.hideFooter();
   }
 }
 </script>

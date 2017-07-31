@@ -28,9 +28,28 @@ const router = new VueRouter({
 /*****定义公用方法开始*****/
 Vue.prototype.hideFooter = function(){
   $("#footer").hide();
+  $("#main").css("height","100%");
 }
 Vue.prototype.showFooter = function(){
   $("#footer").show();
+  $("#main").css("height",(window.screen.height-50)+"px");
+}
+Vue.prototype.finishToast = function(){
+  var $toast = $('#toast');
+  if ($toast.css('display') != 'none') return;
+
+  $toast.fadeIn(100);
+  setTimeout(function () {
+      $toast.fadeOut(100);
+  }, 2000);
+}
+Vue.prototype.loadingToast = function(){
+  var $loadingToast = $('#loadingToast');
+  if ($loadingToast.css('display') != 'none') return;
+  $loadingToast.fadeIn(100);
+  setTimeout(function () {
+      $loadingToast.fadeOut(100);
+  }, 2000);
 }
 /*****定义公用方法结束*****/
 

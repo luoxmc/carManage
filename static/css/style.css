@@ -1,0 +1,16 @@
+#app{
+  height: 100%;
+}
+.page_main{
+  overflow-y: auto;
+}
+.weui-tab__panel{
+  padding-bottom: 0;
+}
+.weui-tabbar{
+  height:50px;
+}
+.footer_temp{
+  height: 50px;
+  width: 100%;
+}

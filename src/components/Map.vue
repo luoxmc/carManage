@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted: function() {
-     this.hideFooter();
+     this.showFooter();
      var map = new BMap.Map("mapContainer");//创建地图实例
      //初始化地图 默认加载北京天安门
      var point = new BMap.Point(116.331398,39.897445);
